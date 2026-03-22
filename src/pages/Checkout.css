@@ -17,11 +17,11 @@
 
 .back-link:hover {
   color: var(--primary);
-  transform: translateX(-4px);
+  transform: translateX(-1px);
 }
 
 .back-link:active {
-  transform: scale(0.98) translateX(-4px);
+  transform: scale(0.98) translateX(-1px);
 }
 
 .checkout-title {

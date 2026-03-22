@@ -22,14 +22,13 @@ const Checkout = ({ cartItems, onClearCart }) => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    setFormData(prev => ({ ...prev, [name]: value }));   
+    };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsOrdered(true);
     onClearCart();
-    // In a real app, this would send data to a backend
   };
 
   if (isOrdered) {
@@ -77,7 +76,7 @@ const Checkout = ({ cartItems, onClearCart }) => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleInputChange} placeholder="john@example.com" />
+                  <input type="email" id="email" name="email" required  onChange={handleInputChange} placeholder="john@example.com" />
                 </div>
                 <div className="form-group full">
                   <label htmlFor="address">Address</label>
@@ -89,7 +88,7 @@ const Checkout = ({ cartItems, onClearCart }) => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="zip">ZIP Code</label>
-                  <input type="text" id="zip" name="zip" required value={formData.zip} onChange={handleInputChange} placeholder="12345" />
+                  <input type="number" id="zip" name="zip" required value={formData.zip} onChange={handleInputChange} placeholder="12345" />
                 </div>
               </div>
             </section>
@@ -102,15 +101,15 @@ const Checkout = ({ cartItems, onClearCart }) => {
               <div className="form-grid">
                 <div className="form-group full">
                   <label htmlFor="card">Card Number</label>
-                  <input type="text" id="card" name="card" required value={formData.card} onChange={handleInputChange} placeholder="0000 0000 0000 0000" />
+                  <input type="number" id="card" name="card" required value={formData.card} onChange={handleInputChange} placeholder="0000 0000 0000 0000" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="expiry">Expiry Date</label>
-                  <input type="text" id="expiry" name="expiry" required value={formData.expiry} onChange={handleInputChange} placeholder="MM/YY" />
+                  <input type="date" id="expiry" name="expiry" required value={formData.expiry} onChange={handleInputChange} placeholder="MM/YY" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="cvv">CVV</label>
-                  <input type="password" id="cvv" name="cvv" required value={formData.cvv} onChange={handleInputChange} placeholder="***" />
+                  <input type="password" id="cvv" name="cvv" minLength={3} maxLength={3} required value={formData.cvv} onChange={handleInputChange} placeholder="***" />
                 </div>
               </div>
             </section>

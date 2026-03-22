@@ -55,6 +55,10 @@ const HeroSection = ({ onAddToCart }) => {
         <Menu onAddToCart={onAddToCart} />
       </section>
 
+      <section id="features">
+        <Features />
+      </section>
+
       <section id="about">
         <About />
       </section>
