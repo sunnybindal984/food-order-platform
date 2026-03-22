@@ -1,0 +1,205 @@
+.features-wrapper {
+  padding: 4rem 0 2rem;
+  background-color: var(--background);
+}
+
+.section-header-top {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.section-header-top .badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.section-header-top h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Highlights Section */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.highlight-card {
+  background-color: var(--surface);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .icon-box {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.highlight-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.highlight-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works {
+  margin-bottom: 6rem;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  position: relative;
+}
+
+.step-item {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.step-number {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: 4px solid var(--background);
+  z-index: 2;
+}
+
+.step-icon {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 2px dashed var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.step-item:hover .step-icon {
+  background-color: var(--primary);
+  color: white;
+  border-style: solid;
+  transform: rotate(10deg);
+}
+
+.step-item h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.step-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.step-connector {
+  position: absolute;
+  top: 50px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--primary) 50%, transparent 50%);
+  background-size: 20px 2px;
+  z-index: -1;
+}
+
+/* Stats Bar */
+.stats-bar {
+  background-color: var(--text-primary);
+  padding: 4rem 0;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .step-connector {
+    display: none;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

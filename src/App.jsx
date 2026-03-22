@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import Cart from './components/Cart';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-background text-text-primary">
         <Navbar 
           cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)} 
