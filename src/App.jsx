@@ -65,7 +65,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-background text-text-primary">
+      <div className="app">
         <Navbar 
           cartCount={cartItems.reduce((acc, item) => acc + item.quantity, 0)} 
           onCartClick={() => setIsCartOpen(true)}
